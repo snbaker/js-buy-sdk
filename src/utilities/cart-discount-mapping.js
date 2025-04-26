@@ -255,7 +255,7 @@ function generateDiscountApplications(cartLinesWithAllDiscountAllocations, disco
 
         if ('code' in discountAllocation.discountApplication) {
           const discountCode = discountCodes.find(
-            ({code}) => code === discountId
+            ({ code }) => code.toUpperCase() === discountId.toUpperCase()
           );
 
           if (!discountCode) {
